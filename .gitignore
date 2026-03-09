@@ -32,3 +32,4 @@ build/
 # Секреты и ключи
 *.env
 .env.*
+!.env.example
