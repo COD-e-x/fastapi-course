@@ -1,11 +1,12 @@
 import uvicorn
 
+from app.config.settings import settings
 
 def main():
     uvicorn.run(
         "app.main:app",
-        host="127.0.0.1",
-        port=8000,
+        host=settings.app.host,
+        port=settings.app.port,
         reload=True,
     )
 
