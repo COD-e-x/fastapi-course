@@ -9,14 +9,14 @@ created_at = Annotated[
     datetime,
     mapped_column(
         DateTime(timezone=True),
-        server_version=func.now(),
+        server_default=func.now(),
     ),
 ]
 updated_at = Annotated[
     datetime,
     mapped_column(
         DateTime(timezone=True),
-        server_version=func.now(),
+        server_default=func.now(),
         onupdate=func.now(),
     ),
 ]
